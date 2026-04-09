@@ -37,6 +37,17 @@ h1 {color:#93c5fd; font-size:22px; margin-bottom:20px;}
 <script>
 const card = document.getElementById('card');
 
+/* 🔹 PORTADA */
+function mostrarPortada(){
+    card.innerHTML = `
+        <h1 style="font-size:30px;">Scape Room Elena Garcia Armada</h1>
+        <button id="startBtn" style="margin-top:30px; padding:12px 25px; font-size:18px; border:none; border-radius:10px; background:#3b82f6; color:white; cursor:pointer;">
+            Continuar
+        </button>
+    `;
+    document.getElementById('startBtn').onclick = () => iniciarUnirFrases();
+}
+
 function iniciarUnirFrases(){
     card.innerHTML=`<h1>Unir frases sobre Elena García Armada</h1>
     <div class='info'>Selecciona primero una palabra de la izquierda, luego la palabra correcta de la derecha.</div>
@@ -209,7 +220,8 @@ function iniciarTextoHuecosFinal(){
     };
 }
 
-iniciarUnirFrases();
+/* 🔹 CAMBIO FINAL */
+mostrarPortada();
 </script>
 </body>
 </html>
